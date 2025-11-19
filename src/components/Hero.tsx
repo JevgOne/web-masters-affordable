@@ -26,20 +26,20 @@ const Hero = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 backdrop-blur-sm border border-primary/20">
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-secondary-foreground">
-              Bezkonkurenční weby za nejlepší ceny
+              Dodání za 5-7 dní • 30-50% levnější než agentury
             </span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
-            Tvorba webů od 10 000 Kč,{" "}
+            Profesionální weby,{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               které prodávají
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-            Vytvoříme vám moderní, rychlý a efektivní web za 5-7 dní. 
-            Bezkonkurenční ceny, žádné kompromisy v kvalitě.
+            Vytvoříme vám moderní, rychlý a efektivní web za cenu, kterou nikdo nepřekoná. 
+            Férové ceny, žádné kompromisy v kvalitě, žádné skryté poplatky.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
