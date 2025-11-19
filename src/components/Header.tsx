@@ -24,18 +24,20 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-28 md:h-32">
+        <div className="flex items-center justify-between h-32 md:h-44">
           {/* Logo */}
           <button 
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
             aria-label="Weblyx - Domů"
           >
-            <img 
-              src={weblyxLogo} 
-              alt="Weblyx" 
-              className="h-20 md:h-28 w-auto"
-            />
+            <div className="bg-white rounded-lg p-2 md:p-3">
+              <img 
+                src={weblyxLogo} 
+                alt="Weblyx" 
+                className="h-24 md:h-36 w-auto"
+              />
+            </div>
           </button>
 
           {/* Desktop Navigation */}
