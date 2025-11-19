@@ -2,28 +2,28 @@ import { TrendingUp, Users, Award, Clock } from "lucide-react";
 
 const stats = [
   {
-    icon: Users,
-    value: "200+",
-    label: "Spokojených klientů",
-    description: "Firem, které nám důvěřují",
+    icon: Clock,
+    value: "5-7 dní",
+    label: "Rychlé dodání",
+    description: "Jednoduchý web hotový",
   },
   {
     icon: Award,
-    value: "98%",
-    label: "Úspěšnost",
-    description: "Projektů dokončených včas",
+    value: "100%",
+    label: "Spokojenost",
+    description: "Guarantee satisfakce",
   },
   {
     icon: TrendingUp,
-    value: "+150%",
-    label: "Průměrný růst",
-    description: "Návštěvnosti webů klientů",
-  },
-  {
-    icon: Clock,
     value: "< 2s",
     label: "Rychlost načtení",
-    description: "Průměrná rychlost našich webů",
+    description: "Optimalizované weby",
+  },
+  {
+    icon: Users,
+    value: "10+",
+    label: "Projektů",
+    description: "Úspěšně dokončeno",
   },
 ];
 
@@ -35,10 +35,10 @@ const Stats = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            Výsledky, na které jsme hrdí
+            Proč si vybrat nás
           </h2>
           <p className="text-xl text-muted-foreground">
-            Čísla mluví za nás - tvoříme weby, které fungují
+            Rychlost, kvalita a moderní technologie za skvělou cenu
           </p>
         </div>
 
@@ -69,8 +69,8 @@ const Stats = () => {
 
         <div className="text-center mt-16 max-w-2xl mx-auto">
           <p className="text-muted-foreground text-lg">
-            Za posledních 5 let jsme pomohli stovkám podnikatelů a firem získat profesionální 
-            online prezentaci za ceny, které konkurence nemůže překonat. Naše řešení skutečně fungují!
+            Moderní technologie a AI nám umožňují vytvářet profesionální weby rychleji a za lepší ceny.
+            Soustředíme se na kvalitu, rychlost dodání a spokojenost každého klienta.
           </p>
         </div>
       </div>
