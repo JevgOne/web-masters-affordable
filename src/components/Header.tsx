@@ -31,13 +31,11 @@ const Header = () => {
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
             aria-label="Weblyx - Domů"
           >
-            <div className="bg-white rounded-xl p-2 md:p-3 shadow-lg border border-gray-100">
-              <img 
-                src={weblyxLogo} 
-                alt="Weblyx" 
-                className="h-24 md:h-36 w-auto"
-              />
-            </div>
+            <img 
+              src={weblyxLogo} 
+              alt="Weblyx" 
+              className="h-24 md:h-36 w-auto"
+            />
           </button>
 
           {/* Desktop Navigation */}
