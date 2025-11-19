@@ -8,7 +8,7 @@ const Hero = () => {
   };
 
   return (
-    <header className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-16 md:pt-20">
       <div 
         className="absolute inset-0 z-0 opacity-10"
         role="presentation"
@@ -77,7 +77,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </header>
+    </section>
   );
 };
 
