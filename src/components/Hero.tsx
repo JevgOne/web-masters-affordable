@@ -38,8 +38,8 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-            Vytvoříme vám moderní, rychlý a efektivní web za cenu, kterou nikdo nepřekoná.
-            Žádné kompromisy v kvalitě.
+            Vytvoříme vám moderní, rychlý a efektivní web za 5-7 dní. 
+            Bezkonkurenční ceny, žádné kompromisy v kvalitě.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
@@ -67,7 +67,7 @@ const Hero = () => {
               <div className="text-sm text-muted-foreground">Spokojenost</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-primary">7 dní</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary">5-7 dní</div>
               <div className="text-sm text-muted-foreground">Dodání</div>
             </div>
             <div className="space-y-2">
