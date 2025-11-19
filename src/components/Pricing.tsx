@@ -4,26 +4,27 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 
 const pricingTiers = [
   {
-    name: "Starter",
-    price: "Od 5 000 Kč",
+    name: "Jednoduchý",
+    price: "Od 10 000 Kč",
     description: "Ideální pro malé firmy a začínající podnikatele",
     features: [
       "Responzivní design",
       "5 podstránek",
       "Kontaktní formulář",
-      "SEO optimalizace",
+      "Základní SEO optimalizace",
       "30 dní podpory zdarma",
     ],
     popular: false,
   },
   {
-    name: "Business",
-    price: "Od 15 000 Kč",
+    name: "Standardní",
+    price: "Od 25 000 Kč",
     description: "Pro firmy, které chtějí růst online",
     features: [
-      "Vše ze Starter",
+      "Vše z Jednoduchého",
       "15 podstránek",
       "Blog/aktuality",
+      "Pokročilé SEO",
       "Napojení na sociální sítě",
       "Google Analytics",
       "3 měsíce podpory zdarma",
@@ -31,13 +32,14 @@ const pricingTiers = [
     popular: true,
   },
   {
-    name: "Enterprise",
-    price: "Individuální",
-    description: "Komplexní řešení na míru vašim potřebám",
+    name: "E-shop / Premium",
+    price: "Od 85 000 Kč",
+    description: "Komplexní řešení, e-shopy na míru",
     features: [
-      "Vše z Business",
+      "Vše ze Standardního",
       "Neomezené podstránky",
-      "E-shop integrace",
+      "E-shop s platební bránou",
+      "Správa skladu",
       "Vlastní funkcionality",
       "Prioritní podpora",
       "Roční podpora zdarma",
