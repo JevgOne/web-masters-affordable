@@ -461,10 +461,10 @@ const Contact = () => {
                           <SelectValue placeholder="Vyberte rozpočet" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="budget">Do 20 000 Kč</SelectItem>
-                          <SelectItem value="standard">20 000 - 50 000 Kč</SelectItem>
-                          <SelectItem value="premium">50 000 - 100 000 Kč</SelectItem>
-                          <SelectItem value="enterprise">Nad 100 000 Kč</SelectItem>
+                          <SelectItem value="budget">Do 15 000 Kč</SelectItem>
+                          <SelectItem value="standard">15 000 - 40 000 Kč</SelectItem>
+                          <SelectItem value="premium">40 000 - 80 000 Kč</SelectItem>
+                          <SelectItem value="enterprise">Nad 80 000 Kč</SelectItem>
                           <SelectItem value="unsure">Nejsem si jistý</SelectItem>
                         </SelectContent>
                       </Select>

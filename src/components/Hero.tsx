@@ -31,7 +31,7 @@ const Hero = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
-            Tvorba webů od 20 000 Kč,{" "}
+            Tvorba webů od 10 000 Kč,{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               které prodávají
             </span>
