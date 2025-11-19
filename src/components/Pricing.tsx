@@ -4,47 +4,67 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 
 const pricingTiers = [
   {
-    name: "Jednoduchý",
-    price: "Od 10 000 Kč",
-    description: "Ideální pro malé firmy a začínající podnikatele",
+    name: "Starter",
+    price: "14 990 Kč",
+    originalPrice: "16 990 Kč",
+    badge: "Launch promo",
+    description: "Landing page pro mikro-firmy a živnostníky",
     features: [
-      "Responzivní design",
-      "5 podstránek",
+      "Responzivní design na míru",
+      "1-3 podstránky",
       "Kontaktní formulář",
       "Základní SEO optimalizace",
-      "30 dní podpory zdarma",
+      "SSL certifikát",
+      "Hosting 6 měsíců zdarma",
+      "Dodání za 5-7 dní",
+      "100% záruka spokojenosti",
     ],
     popular: false,
+    deliveryTime: "5-7 dní",
   },
   {
-    name: "Standardní",
-    price: "Od 25 000 Kč",
-    description: "Pro firmy, které chtějí růst online",
+    name: "Business",
+    price: "37 990 Kč",
+    originalPrice: "39 990 Kč",
+    badge: "Nejoblíbenější",
+    description: "Kompletní web pro malé a střední firmy",
     features: [
-      "Vše z Jednoduchého",
-      "15 podstránek",
-      "Blog/aktuality",
+      "Vše ze Starter balíčku",
+      "8 podstránek",
+      "Vlastní design na míru",
+      "Blog/aktuality s CMS",
       "Pokročilé SEO",
-      "Napojení na sociální sítě",
       "Google Analytics",
-      "3 měsíce podpory zdarma",
+      "Napojení na sociální sítě",
+      "BONUS: Logo design zdarma (hodnota 5.000 Kč)",
+      "Hosting 12 měsíců zdarma",
+      "Dodání za 10-14 dní",
+      "Neomezená podpora",
     ],
     popular: true,
+    deliveryTime: "10-14 dní",
   },
   {
-    name: "E-shop / Premium",
-    price: "Od 85 000 Kč",
-    description: "Komplexní řešení, e-shopy na míru",
+    name: "Enterprise",
+    price: "84 990 Kč",
+    originalPrice: "89 990 Kč",
+    badge: "Launch promo",
+    description: "E-shop nebo booking systém na míru",
     features: [
-      "Vše ze Standardního",
+      "Vše z Business balíčku",
       "Neomezené podstránky",
       "E-shop s platební bránou",
-      "Správa skladu",
-      "Vlastní funkcionality",
-      "Prioritní podpora",
-      "Roční podpora zdarma",
+      "Správa produktů a skladu",
+      "Online platby (Stripe/GoPay)",
+      "Booking/rezervační systém",
+      "Vlastní funkcionality na míru",
+      "BONUS: Brand identity zdarma (hodnota 15.000 Kč)",
+      "Hosting 12 měsíců zdarma",
+      "Dodání za 21-28 dní",
+      "Prioritní podpora 24/7",
     ],
     popular: false,
+    deliveryTime: "21-28 dní",
   },
 ];
 
@@ -54,14 +74,14 @@ const Pricing = () => {
   };
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section id="pricing" className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            Transparentní ceník
+            Férové ceny bez skrytých poplatků
           </h2>
           <p className="text-xl text-muted-foreground">
-            Žádné skryté poplatky. To, co vidíte, je to, co dostanete.
+            Transparentní ceník s launch promo cenami. Žádná překvapení, všechno v ceně.
           </p>
         </div>
         
@@ -75,30 +95,46 @@ const Pricing = () => {
                   : "border-border"
               }`}
             >
-              {tier.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-primary text-primary-foreground text-sm font-semibold rounded-full">
-                  Nejoblíbenější
+              {tier.badge && (
+                <div className={`absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 text-sm font-semibold rounded-full ${
+                  tier.popular 
+                    ? "bg-gradient-primary text-primary-foreground"
+                    : "bg-secondary text-secondary-foreground"
+                }`}>
+                  {tier.badge}
                 </div>
               )}
               
               <CardHeader className="text-center pb-8">
                 <CardTitle className="text-2xl mb-2">{tier.name}</CardTitle>
-                <div className="text-4xl font-bold text-primary mb-2">{tier.price}</div>
-                <CardDescription className="text-base">{tier.description}</CardDescription>
+                <div className="space-y-2">
+                  {tier.originalPrice && (
+                    <div className="text-2xl text-muted-foreground line-through">
+                      {tier.originalPrice}
+                    </div>
+                  )}
+                  <div className="text-4xl font-bold text-primary">{tier.price}</div>
+                </div>
+                <CardDescription className="text-base pt-2">{tier.description}</CardDescription>
+                <div className="pt-3 text-sm font-medium text-primary">
+                  ⚡ Dodání: {tier.deliveryTime}
+                </div>
               </CardHeader>
               
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-3">
                 {tier.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check className="w-3 h-3 text-primary" />
                     </div>
-                    <span className="text-sm text-foreground">{feature}</span>
+                    <span className={`text-sm ${feature.includes("BONUS") ? "font-semibold text-accent" : "text-foreground"}`}>
+                      {feature}
+                    </span>
                   </div>
                 ))}
               </CardContent>
               
-              <CardFooter>
+              <CardFooter className="pt-6">
                 <Button 
                   variant={tier.popular ? "hero" : "outline"}
                   className="w-full"
@@ -111,17 +147,30 @@ const Pricing = () => {
           ))}
         </div>
         
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 space-y-4">
           <p className="text-muted-foreground">
-            Máte speciální požadavky?{" "}
+            Máte speciální požadavky nebo potřebujete individuální řešení?{" "}
             <button 
               onClick={scrollToContact}
               className="text-primary hover:underline font-medium"
             >
               Kontaktujte nás
-            </button>{" "}
-            pro individuální nabídku.
+            </button>
           </p>
+          <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground pt-4">
+            <div className="flex items-center gap-2">
+              <Check className="w-4 h-4 text-primary" />
+              <span>100% záruka vrácení peněz</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Check className="w-4 h-4 text-primary" />
+              <span>Bez skrytých poplatků</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Check className="w-4 h-4 text-primary" />
+              <span>Rychlé dodání</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
