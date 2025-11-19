@@ -31,7 +31,7 @@ const Header = () => {
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
             aria-label="Weblyx - Domů"
           >
-            <div className="bg-white rounded-lg p-2 md:p-3">
+            <div className="bg-white rounded-xl p-2 md:p-3 shadow-lg border border-gray-100">
               <img 
                 src={weblyxLogo} 
                 alt="Weblyx" 
