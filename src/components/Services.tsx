@@ -26,16 +26,16 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-background">
+    <section id="services" className="py-24 bg-background" aria-labelledby="services-heading">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            Proč si vybrat nás?
+        <header className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <h2 id="services-heading" className="text-4xl md:text-5xl font-bold text-foreground">
+            Proč si vybrat nás pro tvorbu webu?
           </h2>
           <p className="text-xl text-muted-foreground">
-            Kombinujeme špičkovou kvalitu s bezkonkurenčními cenami
+            Kombinujeme špičkovou kvalitu s bezkonkurenčními cenami a rychlým dodáním
           </p>
-        </div>
+        </header>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {services.map((service, index) => (
@@ -44,8 +44,8 @@ const Services = () => {
               className="border-border hover:shadow-elegant transition-all duration-300 hover:-translate-y-1"
             >
               <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center mb-4">
-                  <service.icon className="w-6 h-6 text-primary-foreground" />
+                <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center mb-4" aria-hidden="true">
+                  <service.icon className="w-6 h-6 text-primary-foreground" aria-label={service.title} />
                 </div>
                 <CardTitle className="text-xl">{service.title}</CardTitle>
               </CardHeader>

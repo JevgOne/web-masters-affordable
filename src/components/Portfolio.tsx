@@ -48,38 +48,41 @@ const portfolioItems = [
 
 const Portfolio = () => {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-background" aria-labelledby="portfolio-heading">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            Naše realizace
+        <header className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <h2 id="portfolio-heading" className="text-4xl md:text-5xl font-bold text-foreground">
+            Reference - Naše realizované projekty
           </h2>
           <p className="text-xl text-muted-foreground">
-            Podívejte se na projekty, které jsme vytvořili pro naše spokojené klienty
+            Podívejte se na úspěšné webové projekty, které jsme vytvořili - e-shopy, firemní weby, landing pages a další
           </p>
-        </div>
+        </header>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {portfolioItems.map((item, index) => (
-            <Card 
+            <article 
               key={index}
               className="group overflow-hidden hover:shadow-elegant transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="relative overflow-hidden aspect-video">
-                <img 
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                  loading="lazy"
-                />
+              <Card>
+                <div className="relative overflow-hidden aspect-video">
+                  <img 
+                    src={item.image}
+                    alt={`${item.title} - ${item.category} - příklad naší práce v oblasti tvorby ${item.category.toLowerCase()}`}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    loading="lazy"
+                    width="800"
+                    height="600"
+                  />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
                   <ExternalLink className="w-6 h-6 text-primary" />
                 </div>
-              </div>
-              <CardContent className="p-6 space-y-3">
-                <div className="text-sm text-primary font-medium">{item.category}</div>
-                <h3 className="text-xl font-bold text-foreground">{item.title}</h3>
-                <p className="text-muted-foreground text-sm">{item.description}</p>
+                </div>
+                <CardContent className="p-6 space-y-3">
+                  <div className="text-sm text-primary font-medium">{item.category}</div>
+                  <h3 className="text-xl font-bold text-foreground">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm">{item.description}</p>
                 <div className="flex flex-wrap gap-2 pt-2">
                   {item.tags.map((tag, tagIndex) => (
                     <span 
@@ -89,9 +92,10 @@ const Portfolio = () => {
                       {tag}
                     </span>
                   ))}
-                </div>
-              </CardContent>
-            </Card>
+                  </div>
+                </CardContent>
+              </Card>
+            </article>
           ))}
         </div>
       </div>

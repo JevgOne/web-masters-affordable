@@ -8,9 +8,11 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <header className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       <div 
         className="absolute inset-0 z-0 opacity-10"
+        role="presentation"
+        aria-hidden="true"
         style={{
           backgroundImage: `url(${heroBg})`,
           backgroundSize: 'cover',
@@ -29,7 +31,7 @@ const Hero = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
-            Profesionální weby,{" "}
+            Tvorba webů od 20 000 Kč,{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               které prodávají
             </span>
@@ -75,7 +77,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </header>
   );
 };
 
