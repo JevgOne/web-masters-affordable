@@ -1,6 +1,8 @@
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import facebookCover from "@/assets/social-media/facebook-cover.jpg";
 import profilePicture from "@/assets/social-media/profile-picture.jpg";
 import instagramPost from "@/assets/social-media/instagram-post-template.jpg";
@@ -66,80 +68,126 @@ const SocialMediaAssets = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-foreground mb-4">
-            Social Media Vizuály
-          </h1>
-          <p className="text-muted-foreground text-lg mb-8">
-            Kompletní sada brandingových materiálů pro Weblyx
-          </p>
-          <Button size="lg" onClick={downloadAll} className="gap-2">
-            <Download className="w-5 h-5" />
-            Stáhnout vše
-          </Button>
-        </div>
+    <div className="min-h-screen">
+      <Header />
+      
+      <main className="pt-32 md:pt-44 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              Social Media Vizuály
+            </h1>
+            <p className="text-muted-foreground text-lg mb-8">
+              Kompletní sada brandingových materiálů pro Weblyx
+            </p>
+            <Button size="lg" onClick={downloadAll} className="gap-2">
+              <Download className="w-5 h-5" />
+              Stáhnout vše
+            </Button>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {assets.map((asset, index) => (
-            <Card key={index} className="overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {assets.map((asset, index) => (
+              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle>{asset.title}</CardTitle>
+                  <CardDescription>{asset.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="mb-4">
+                    <img
+                      src={asset.image}
+                      alt={asset.title}
+                      className="w-full h-auto rounded-lg border border-border"
+                    />
+                  </div>
+                  <Button
+                    onClick={() => downloadImage(asset.image, asset.filename)}
+                    className="w-full gap-2"
+                  >
+                    <Download className="w-4 h-4" />
+                    Stáhnout
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Card className="max-w-2xl mx-auto">
               <CardHeader>
-                <CardTitle>{asset.title}</CardTitle>
-                <CardDescription>{asset.description}</CardDescription>
+                <CardTitle>Brandingové pokyny</CardTitle>
+                <CardDescription>
+                  Důležité informace pro zachování konzistence značky
+                </CardDescription>
               </CardHeader>
-              <CardContent>
-                <div className="mb-4">
-                  <img
-                    src={asset.image}
-                    alt={asset.title}
-                    className="w-full h-auto rounded-lg border border-border"
-                  />
+              <CardContent className="text-left space-y-4">
+                <div>
+                  <h3 className="font-semibold mb-2">Hlavní barva:</h3>
+                  <p className="text-sm text-muted-foreground">Turquoise (#00B4D8)</p>
                 </div>
-                <Button
-                  onClick={() => downloadImage(asset.image, asset.filename)}
-                  className="w-full gap-2"
-                >
-                  <Download className="w-4 h-4" />
-                  Stáhnout
-                </Button>
+                <div>
+                  <h3 className="font-semibold mb-2">Použití loga:</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Logo používejte na čistém pozadí s dostatečným prostorem kolem.
+                    Neměňte jeho proporce ani barvy.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-2">Tón komunikace:</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Moderní, přátelský, profesionální. Zaměřte se na rychlost,
+                    kvalitu a dostupnost služeb.
+                  </p>
+                </div>
               </CardContent>
             </Card>
-          ))}
-        </div>
+          </div>
 
-        <div className="mt-12 p-6 bg-muted rounded-lg">
-          <h2 className="text-2xl font-bold mb-4">Návod k použití</h2>
-          <div className="grid md:grid-cols-2 gap-6 text-sm">
-            <div>
-              <h3 className="font-semibold mb-2">📘 Facebook</h3>
-              <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                <li>Cover photo: Nastavení → Upravit stránku → Titulní fotka</li>
-                <li>Profile: Klikněte na profilový obrázek → Nahrát fotku</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">📷 Instagram</h3>
-              <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                <li>Profile: Profil → Upravit profil → Změnit fotku</li>
-                <li>Post/Story: Použijte šablony jako pozadí</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">✈️ Telegram</h3>
-              <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                <li>Kanál: Nastavení kanálu → Upravit → Fotka</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">💬 WhatsApp Business</h3>
-              <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                <li>Nastavení → Profil → Klepnout na fotku → Změnit</li>
-              </ul>
-            </div>
+          <div className="mt-12">
+            <Card>
+              <CardHeader>
+                <CardTitle>Návod k použití</CardTitle>
+                <CardDescription>
+                  Jak nastavit vizuály na jednotlivých platformách
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-6 text-sm">
+                  <div>
+                    <h3 className="font-semibold mb-2">📘 Facebook</h3>
+                    <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                      <li>Cover photo: Nastavení → Upravit stránku → Titulní fotka</li>
+                      <li>Profile: Klikněte na profilový obrázek → Nahrát fotku</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">📷 Instagram</h3>
+                    <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                      <li>Profile: Profil → Upravit profil → Změnit fotku</li>
+                      <li>Post/Story: Použijte šablony jako pozadí</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">✈️ Telegram</h3>
+                    <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                      <li>Kanál: Nastavení kanálu → Upravit → Fotka</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">💬 WhatsApp Business</h3>
+                    <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                      <li>Nastavení → Profil → Klepnout na fotku → Změnit</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
-      </div>
+      </main>
+      
+      <Footer />
     </div>
   );
 };
