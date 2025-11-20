@@ -34,7 +34,7 @@ const Header = () => {
             <img 
               src={weblyxLogo} 
               alt="Weblyx" 
-              className="h-24 md:h-36 w-auto"
+              className="h-24 md:h-36 w-auto transition-transform duration-300 hover:scale-110"
             />
           </button>
 
