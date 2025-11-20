@@ -8,6 +8,12 @@ import facebookCoverNew from "@/assets/social-media/facebook-cover-new.jpg";
 import profileNew from "@/assets/social-media/profile-new.jpg";
 import instagramPostNew from "@/assets/social-media/instagram-post-new.jpg";
 import instagramStoryNew from "@/assets/social-media/instagram-story-new.jpg";
+import instagramStarterPrice from "@/assets/social-media/instagram-starter-price.jpg";
+import instagramSpeedBenefits from "@/assets/social-media/instagram-speed-benefits.jpg";
+import instagramWhyWeblyx from "@/assets/social-media/instagram-why-weblyx.jpg";
+import storyNoWebsite from "@/assets/social-media/story-no-website.jpg";
+import storyFreeConsultation from "@/assets/social-media/story-free-consultation.jpg";
+import instagramPricingOverview from "@/assets/social-media/instagram-pricing-overview.jpg";
 
 const SocialMediaAssets = () => {
   const assets = [
@@ -40,6 +46,42 @@ const SocialMediaAssets = () => {
       description: "1080 x 1920px - Šablona pro Instagram stories",
       image: instagramStoryNew,
       filename: "weblyx-instagram-story.jpg",
+    },
+    {
+      title: "Instagram Post - Starter Balíček",
+      description: "1080 x 1080px - Post s cenou Starter balíčku",
+      image: instagramStarterPrice,
+      filename: "weblyx-starter-price.jpg",
+    },
+    {
+      title: "Instagram Post - Rychlé Moderní Weby",
+      description: "1080 x 1080px - Post s benefity a rychlostí dodání",
+      image: instagramSpeedBenefits,
+      filename: "weblyx-speed-benefits.jpg",
+    },
+    {
+      title: "Instagram Post - Proč Weblyx",
+      description: "1080 x 1080px - Post se 4 důvody proč si vybrat Weblyx",
+      image: instagramWhyWeblyx,
+      filename: "weblyx-why-weblyx.jpg",
+    },
+    {
+      title: "Instagram Post - Cenový Přehled",
+      description: "1080 x 1080px - Přehled všech 3 cenových balíčků",
+      image: instagramPricingOverview,
+      filename: "weblyx-pricing-overview.jpg",
+    },
+    {
+      title: "Instagram Story - Máte Podnikání Bez Webu?",
+      description: "1080 x 1920px - Story s výzvou pro podnikatele",
+      image: storyNoWebsite,
+      filename: "weblyx-story-no-website.jpg",
+    },
+    {
+      title: "Instagram Story - Zdarma Konzultace",
+      description: "1080 x 1920px - Story s nabídkou konzultace",
+      image: storyFreeConsultation,
+      filename: "weblyx-story-consultation.jpg",
     },
   ];
 
