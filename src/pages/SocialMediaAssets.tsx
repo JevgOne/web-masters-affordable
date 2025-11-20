@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import weblyxLogo from "@/assets/weblyx-logo.png";
 import facebookCover from "@/assets/social-media/facebook-cover.jpg";
 import profilePicture from "@/assets/social-media/profile-picture.jpg";
 import instagramPost from "@/assets/social-media/instagram-post-template.jpg";
@@ -12,6 +13,12 @@ import whatsappProfile from "@/assets/social-media/whatsapp-profile.jpg";
 
 const SocialMediaAssets = () => {
   const assets = [
+    {
+      title: "Weblyx Logo",
+      description: "1024 x 1024px - Hlavní logo Weblyx",
+      image: weblyxLogo,
+      filename: "weblyx-logo.png",
+    },
     {
       title: "Facebook Cover",
       description: "1640 x 624px - Titulní obrázek pro Facebook",
