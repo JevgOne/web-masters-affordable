@@ -4,12 +4,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import weblyxLogo from "@/assets/weblyx-logo.png";
-import facebookCover from "@/assets/social-media/facebook-cover.jpg";
-import profilePicture from "@/assets/social-media/profile-picture.jpg";
-import instagramPost from "@/assets/social-media/instagram-post-template.jpg";
-import instagramStory from "@/assets/social-media/instagram-story-template.jpg";
-import telegramProfile from "@/assets/social-media/telegram-profile.jpg";
-import whatsappProfile from "@/assets/social-media/whatsapp-profile.jpg";
+import facebookCoverNew from "@/assets/social-media/facebook-cover-new.jpg";
+import profileNew from "@/assets/social-media/profile-new.jpg";
+import instagramPostNew from "@/assets/social-media/instagram-post-new.jpg";
+import instagramStoryNew from "@/assets/social-media/instagram-story-new.jpg";
 
 const SocialMediaAssets = () => {
   const assets = [
@@ -22,38 +20,26 @@ const SocialMediaAssets = () => {
     {
       title: "Facebook Cover",
       description: "1640 x 624px - Titulní obrázek pro Facebook",
-      image: facebookCover,
+      image: facebookCoverNew,
       filename: "weblyx-facebook-cover.jpg",
     },
     {
       title: "Profilový obrázek",
-      description: "1080 x 1080px - Pro Facebook, Instagram, LinkedIn",
-      image: profilePicture,
+      description: "1024 x 1024px - Pro Facebook, Instagram, LinkedIn, Telegram, WhatsApp",
+      image: profileNew,
       filename: "weblyx-profile-picture.jpg",
     },
     {
-      title: "Instagram Post Template",
+      title: "Instagram Post Šablona",
       description: "1080 x 1080px - Šablona pro Instagram posty",
-      image: instagramPost,
+      image: instagramPostNew,
       filename: "weblyx-instagram-post.jpg",
     },
     {
-      title: "Instagram Story Template",
+      title: "Instagram Story Šablona",
       description: "1080 x 1920px - Šablona pro Instagram stories",
-      image: instagramStory,
+      image: instagramStoryNew,
       filename: "weblyx-instagram-story.jpg",
-    },
-    {
-      title: "Telegram Profilový obrázek",
-      description: "1024 x 1024px - Pro Telegram kanál",
-      image: telegramProfile,
-      filename: "weblyx-telegram-profile.jpg",
-    },
-    {
-      title: "WhatsApp Business Profilový obrázek",
-      description: "1024 x 1024px - Pro WhatsApp Business",
-      image: whatsappProfile,
-      filename: "weblyx-whatsapp-profile.jpg",
     },
   ];
 
